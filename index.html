@@ -17,79 +17,184 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<!-- Отображаемое тело страницы -->
-<body> 
+    <body> 
 
-    <!-- Header and Nav Заголовок с навигацией -->
-    <div class="header">
+        <!-- Header and Nav Заголовок с навигацией -->
+        <div class="header">
+            <!-- Block wrapper - Блок обертка -->
+            <div class="wrapper">
+                <!-- Block wrapper for header - Блок обертка для header -->
+                <div class="header__wrapper">
+                    <!-- Block for logo -->
+                    <div class="header__logo">
+                        <a href="/" class="headrt__logo-link">
+                        <img src="./img/svg/odigo-logo.svg" alt="Discover Amazing places in Japan" class="header__logo-pic">
+                        </a>
+                    </div>
+                    <!-- Block for nav -->
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Articles</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Locations</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Videos</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Sign in</a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- Main part of the page content - Основаня часть контента страницы -->
+        <main class="main">
 
-      <!-- Block wrapper - Блок обертка -->
-      <div class="wrapper">
 
-         <!-- Block wrapper for header - Блок обертка для header -->
-        <div class="header__wrapper">
+            <!-- Start Секция интро -->
+            <section class="intro">
+                <div class="wrapper">
+                    <h1 class="intro__title">
+                        Discover Amazing places in Japan
+                    </h1>
+                    <p class="intro__subtitle">
+                        Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                        Being gorgeous with belly side up i could pee on this if i had
+                        the energy but under the bed, for attack the child, open the door, 
+                    </p>
+                    <form action="#" class="searc-form">
+                        <!-- Для семанткики но с ним не удобно работать -->
+                        <fieldset class="search-form__wrap">
+                        <!-- для удобства позиционирования -->
+                        <p class="search-form__info">
+                            <input type="text" name="user-like-to-do" class="search-form-field" placeholder="What would you like to do?" >
+                            <input type="text" name="user-like-to-go" class="search-form-field" placeholder="Where would you like to go?" >
+                            <button type="submit" class="search-form__submit">Search</button>
+                        </p>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <!-- End Секция интро -->
 
-          <!-- Block for logo -->
-          <div class="header__logo">
-            <a href="/" class="headrt__logo-link">
-              <img src="./img/svg/odigo-logo.svg" alt="Discover Amazing places in Japan" class="header__logo-pic">
-            </a>
-          </div>
+            
+            <!-- Start section benefits -->
+            <section class="benefits">
+                <div class="benefits__wrap">
+                    <h2 class="benefits__title">
+                        Benefits of Odigo
+                    </h2>
+                    <div class="benefits__cards">
+                        <div class="benefits__card">
+                            <div class="benefits__card-pic">
+                                <img src="./img/svg/church-icon.svg" alt="Welcome to Odigo!" class="benefits__card-thumb">
+                            </div>
+                            <h3 class="benefits__card-title">
+                                Welcome to Odigo!
+                            </h3>
+                            <p class="benefits__card-desc">
+                                Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                            </p>
+                            <a href="!#" class="benefits__card-more">
+                                LEARN MORE
+                            </a>
+                        </div>
+                        <div class="benefits__card">
+                            <div class="benefits__card-pic">
+                                <img src="./img/svg/person-icon.svg" alt="Your Personal Japan Guide" class="benefits__card-thumb">
+                            </div>
+                            <h3 class="benefits__card-title">
+                                Your Personal Japan Guide
+                            </h3>
+                            <p class="benefits__card-desc">
+                                Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                            </p>
+                            <a href="!#" class="benefits__card-more">
+                                LEARN MORE
+                            </a>
+                        </div>
+                        <div class="benefits__card">
+                            <div class="benefits__card-pic">
+                                <img src="./img/svg/building-icon.svg" alt="Promoting Local Businesses" class="benefits__card-thumb">
+                            </div>
+                            <h3 class="benefits__card-title">
+                                Promoting Local Businesses
+                            </h3>
+                            <p class="benefits__card-desc">
+                                Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                            </p>
+                            <a href="!#" class="benefits__card-more">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End section benefits -->
 
-          <!-- Block for nav -->
-          <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#!" class="header__link">Articles</a>
-              </li>
-              <li class="header__item">
-                <a href="#!" class="header__link">Locations</a>
-              </li>
-              <li class="header__item">
-                <a href="#!" class="header__link">Videos</a>
-              </li>
-              <li class="header__item">
-                <a href="#!" class="header__link">Sign in</a>
-              </li>
-            </ul>
-          </nav>
 
-        </div>
+            <!-- Start section places -->
+            <section class="places">
+                <div class="wrapper-full">
+                    <div class="places__caption">
+                        <h2 class="places__title section-title">
+                            Get inspired for your next trip
+                        </h2>
+                        <a href="!#" class="places__view-all">VIEW ALL</a>
+                    </div>
+                    <div class="places__cards">
+                        <figure class="places__card places__card-size-lg">
+                            <img class="places__card-pic places__card-pic-size-lg" src="./img/place-1.jpg" alt="Mount Fuji">
+                            <figcaption class="places__card-title">
+                                Mount Fuji
+                            </figcaption>
+                            <a href="!#" class="places__card-link"></a>
+                        </figure>
+                        <figure class="places__card places__card-size-lg">
+                            <img class="places__card-pic places__card-pic-size-lg" src="./img/place-2.jpg" alt="Kyoto">
+                            <figcaption class="places__card-title">
+                                Kyoto
+                            </figcaption>
+                            <a href="!#" class="places__card-link"></a>
+                        </figure>
+
+                        <figure class="places__card places__card-size-sm">
+                            <img class="places__card-pic places__card-pic-size-sm" src="./img/place-3.jpg" alt="Tokyo">
+                            <figcaption class="places__card-title">
+                                Tokyo
+                            </figcaption>
+                            <a href="!#" class="places__card-link"></a>
+                        </figure>
+                        <figure class="places__card places__card-size-sm">
+                            <img class="places__card-pic places__card-pic-size-sm" src="./img/place-4.jpg" alt="Niigata">
+                            <figcaption class="places__card-title">
+                                Niigata
+                            </figcaption>
+                            <a href="!#" class="places__card-link"></a>
+                        </figure>
+                        <figure class="places__card places__card-size-sm">
+                            <img class="places__card-pic places__card-pic-size-sm" src="./img/place-5.jpg" alt="Sapporo">
+                            <figcaption class="places__card-title">
+                                Sapporo
+                            </figcaption>
+                            <a href="!#" class="places__card-link"></a>
+                        </figure>
+                        
+                    </div>
+                    
+                </div>
+
+            </section>
+            <!-- End section places -->
 
 
-       
+        </main>
 
-      </div>
-    </div>  
-    
-    <!-- Main part of the page content - Основаня часть контента страницы -->
-    <main class="main">
-
-      <!-- Секция интро -->
-      <section class="intro">
-        <div class="wrapper">
-          <h1 class="intro__title">
-            Discover Amazing places in Japan
-          </h1>
-          <p class="intro__subtitle">
-            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
-            Being gorgeous with belly side up i could pee on this if i had
-            the energy but under the bed, for attack the child, open the door, 
-          </p>
-          <form action="#" class="searc-form">
-            <!-- Для семанткики но с ним не удобно работать -->
-            <fieldset class="search-form__wrap">
-              <!-- для удобства позиционирования -->
-              <p class="search-form__info">
-                <input type="text" name="user-like-to-do" class="search-form-field" placeholder="What would you like to do?" >
-                <input type="text" name="user-like-to-go" class="search-form-field" placeholder="Where would you like to go?" >
-                <button type="submit" class="search-form__submit">Search</button>
-              </p>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-    </main>
-
-</body>
+    </body>
 </html>
 
