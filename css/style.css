@@ -54,8 +54,15 @@ body {
   font-weight: normal;
   color: #102746;
 }
+
 input,button,textarea,form {
   font-family: inherit;  /* наследие шрифта */
+}
+
+/* Что бы картинка занимала 100% от контейнера и высота была авто */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
@@ -63,7 +70,32 @@ input,button,textarea,form {
   margin: 0 auto;
 }
 
-/* Header style start **************************************************** */
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
+.section-title {
+  position: relative; /* для позиционирования линии снизу */
+  padding-bottom: 10px; /* учитываем линию */
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+}
+
+.section-title::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: '';
+  width: 253px;
+  height: 3px;
+  background: #006DFE;
+}
+
+/*! Header style start *****************************************************/
 .header {
   position: fixed;
   top: 0;
@@ -99,14 +131,13 @@ input,button,textarea,form {
 {
   opacity: 0.75;
 }
-/* Header style end //////////////////////////////////////////////////////// */
+/*! Header style end //////////////////////////////////////////////////////// */
 
 
-
-/* Intro style start **************************************************** */
-
+/*! Intro style start **************************************************** */
 .intro {
   padding-top: 263px;
+  padding-bottom: 223px; /* когда будет много текста что бы не наехал на benefits__title */
   min-height: 100vh;
   /* no-repeat что бы не повторялась картинка*/
   /* center по центру*/
@@ -139,7 +170,6 @@ input,button,textarea,form {
 .search-form__info {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .search-form-field {
@@ -178,8 +208,201 @@ input,button,textarea,form {
 .search-form__submit:active {
   background: #1366d5;
 }
+/*! Intro style End //////////////////////////////////////////////////////// */
 
-/* Intro style end //////////////////////////////////////////////////////// */
+
+/*! Benefits style Start  **************************************************** */
+.benefits {
+  margin-bottom: 131px;
+}
+
+.benefits__wrap {
+  position: relative;
+  max-width: 1262px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+
+.benefits__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%); /* all hight title */
+  width: 100%;
+  padding: 93px 100px 88px 100px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  background-color: #FFFFFF;
+}
+
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 55px;
+  padding: 0 100px;
+}
+
+.benefits__card {
+  /* что бы карточки занимали колонку */
+  grid-column: span 1;
+  margin-bottom: 112px;
+}
+
+.benefits__card-pic {
+  max-width: 66px;
+  margin-bottom: 37px;
+}
+
+.benefits__card-thumb {
+  /* что бы убрать все начальные отступы у картинки */
+  display: block; 
+  transition: 0.4s;
+}
+
+.benefits__card-thumb:hover,
+.benefits__card-thumb:focus {
+  transform: scale(1.1);
+}
+
+.benefits__card-title {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+.benefits__card-desc {
+  margin-bottom: 39px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.benefits__card-more {
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  padding-right: 59px; /* учитываем размер стрелки */
+  background-size: 33px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #006DFE;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.benefits__card-more:hover,
+.benefits__card-more:focus {
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
+  background-color: #00000011;
+}
+/*! Benefits style End //////////////////////////////////////////////////////// */
+
+
+/*! Places style Start  **************************************************** */
+.places {
+  margin-bottom: 131px;
+}
+
+.places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.places__title {
+  margin-right: 30px;
+}
+
+.places__view-all {
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  padding-right: 59px; /* учитываем размер стрелки */
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #006DFE;
+}
+
+.places__view-all:hover,
+.places__view-all:focus
+{
+  opacity: 0.65;
+}
+
+.places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.places__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.places__card:hover .places__card-pic {
+  transform: scale(1.1);
+}
+
+/* для  */
+.places__card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: '';
+  background-color: rgba(21, 24, 36, 0.4);
+}
+
+/* для размера блока */
+.places__card-size-lg {
+  grid-column: span 3;
+}
+
+.places__card-size-sm {
+  grid-column: span 2;
+}
+
+.places__card-pic {
+  width: 100%;       /* Что бы картинка занята весь блок places__card */
+  transition: 0.4s;  /* при наведении анимация */
+}
+
+.places__card-pic-size-lg {
+  height: 354px;     /* так как высота картинок разная уравняем ее сработает только с object-fit */ 
+  object-fit: cover; /* при маштабировании в фокусе будет всегда центр картинку КРУТО */
+}
+.places__card-pic-size-sm {
+  height: 283px;     /* так как высота картинок разная уравняем ее сработает только с object-fit */ 
+  object-fit: cover; /* при маштабировании в фокусе будет всегда центр картинку КРУТО */
+}
+
+.places__card-title {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: #FFFFFF;
+}
+
+.places__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+/*! Places style End //////////////////////////////////////////////////////// */
 
 
 /* •	порядок определения стилей:
