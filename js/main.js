@@ -8,3 +8,15 @@
     }
   }
 }())
+
+(function () {
+  const burderItem = document.querySelector('.burger');
+  const menu = document.querySelector('.header__nav');
+  const menuCloseItem = document.querySelector('.header__nav-close')
+  burderItem.addEventListener('click', () => {
+    menu.classList.add('header__nav-active')
+  })
+  menuCloseItem.addEventListener('click', () => {
+    menu.classList.remove('header__nav-active')
+  })
+}());
