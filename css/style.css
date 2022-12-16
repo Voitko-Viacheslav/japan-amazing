@@ -405,6 +405,160 @@ img {
 /*! Places style End //////////////////////////////////////////////////////// */
 
 
+/*! Tours style Start  **************************************************** */
+.tours {
+  margin-bottom: 139px;
+}
+
+.tours__tour {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+.tour {
+}
+.tour__pic {
+}
+.tour__thumb {
+}
+
+.tour__info {
+  padding-left: 47px;
+}
+
+.tour__title {
+  margin-bottom: 85px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #102746;
+}
+
+.tour__desc {
+  margin-bottom: 58px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+}
+
+.tour__more {
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  padding-right: 59px; /* учитываем размер стрелки */
+  background-size: 33px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #006DFE;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.tour__more:hover,
+.tour__more:focus
+ {
+  opacity: 0.65;
+}
+/*! Tours style End //////////////////////////////////////////////////////// */
+
+
+/*! Top style Start  **************************************************** */
+
+.top {
+  margin-bottom: 86px;
+}
+
+.top__title {
+  margin-bottom: 58px;
+}
+
+.section-title {
+}
+
+.top__cards {  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 57px;
+}
+
+.top__card {
+  display: flex;
+  flex-direction: column; /*! что бы кнопки были с низу */
+}
+
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card-thumb {
+}
+
+.top__card-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 25px;
+  background-color: rgba(21, 24, 36, 0.6);
+}
+
+.top__card-title {
+  margin: 0 auto 0 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.top__card-likes {
+  margin-right: 14px;
+  padding-right: 20px;
+  background: url(../img/svg/heart-ico.svg) no-repeat right center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.top__card-likes-value {
+ 
+}
+.top__card-comments {
+  padding-right: 23px;
+  background: url(../img/svg/coment-ico.svg) no-repeat right center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.top__card-comments-value {
+}
+.top__card-desc {
+  margin-bottom: 31px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+}
+
+.top__card-more {
+  padding: 12px 19px;
+  width: 118px;
+  margin: auto 0 0 0; /*! что бы кнопки были с низу */
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #006DFE;
+  text-decoration: none;
+}
+.top__card-more:hover, .top__card-moret:focus, .top__card-moret:active {
+  background: #1366d5;
+}
+/*! Top style End //////////////////////////////////////////////////////// */
+
+
 /* •	порядок определения стилей:
 o	позиционирование
 o	блочная модель (размеры, отступы)
