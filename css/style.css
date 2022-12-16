@@ -101,9 +101,20 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.header_active {
+  padding-bottom: 20px;
+  z-index: 6;
+  background-color: #0E1D28;
 }
 
 .header__wrapper {
+  max-width: 1440px;
+  padding: 0 185px 20px 185px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end; /* выравнивание вдоль поперечной оси */
@@ -557,6 +568,82 @@ img {
   background: #1366d5;
 }
 /*! Top style End //////////////////////////////////////////////////////// */
+
+
+/*! Videos style Start  **************************************************** */
+.videos {
+  width: 100%;
+}
+
+/*? Видео красиво позиционирую  */
+.videos__wrapper {
+  position: relative; /* сжималось без линий */
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.video__item {
+  /* 9/16*100 для видео 9*16 что бы сжималось без линий */
+  padding-top: 56.25%;
+}
+
+/* сжималось без линий */
+.video__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*! Videos style End //////////////////////////////////////////////////////// */
+
+
+/*! footer style Start  **************************************************** */
+.footer {
+  padding: 119px 0;
+  background: #0E1D28;
+}
+
+.footer__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__logo {
+  width: 50%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer__menu-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.footer__menu-title:hover {
+  scale: 1.1;
+}
+
+.footer__menu-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:focus,
+.footer__menu-link:active
+{
+  opacity: 0.7;
+}
+/*! footer style End //////////////////////////////////////////////////////// */
 
 
 /* •	порядок определения стилей:
